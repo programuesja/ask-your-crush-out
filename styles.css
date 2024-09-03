@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff5f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffebef;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2em;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+.cat-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cat-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#newCatContainer .cat-image {
+    width: 250px;
+    height: 250px;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+.noButton {
+    position: relative;
+    background-color: #ff69b4;
+    color: white;
+    cursor: not-allowed;
+}
+
+.noButton:hover {
+    background-color: #ccc;
+}
+
+.noButton::after {
+    content: "Wrong answer!";
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff69b4;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.noButton:hover::after {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+#response {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #ff69b4;
+    text-align: center;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Go Out with Me?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Will You Go Out with Me? </h1>
+        <div class="cat-container" id="catContainer">
+            <img src="https://i.redd.it/i1unzy2wpz311.png" alt="Cute Cat" class="cat-image" id="initialCatImage">
+        </div>
+        <button id="yesButton">Yes</button>
+        <button id="noButton" class="noButton">No</button>
+
+        <div id="response" class="hidden"></div>
+
+        <div class="cat-container hidden" id="newCatContainer">
+            <img src="https://i.imgflip.com/6xlbkw.jpg?a479016" alt="Flower Cat" class="cat-image" id="newCatImage">
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("yesButton").addEventListener("click", function() {
+            const responseDiv = document.getElementById("response");
+            const initialCatImage = document.getElementById("initialCatImage");
+            const newCatContainer = document.getElementById("newCatContainer");
+
+            initialCatImage.parentElement.classList.add("hidden");
+            newCatContainer.classList.remove("hidden");
+
+            responseDiv.textContent = "Yay! Can't wait to go out with you! 🌸";
+            responseDiv.classList.remove("hidden");
+        });
+    </script>
+</body>
+</html>
